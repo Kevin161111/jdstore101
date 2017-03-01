@@ -11,13 +11,14 @@
 				<header>
 					<a class="remove">
             <%= link_to product_path(cart_item.product) do  %>
-            <% if cart_item.product.image.present? %>
-            <%= image_tag(cart_item.product.image.thumb.url)%>
+            <% if cart_item.product.photos.present? %>
+            <%= image_tag(cart_item.product.photos[0].avatar.thumb.url)%>
             <% else %>
               <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
             <% end %>
 
             <% end %>
+
 
 
 						<h3><%= link_to("删除此商品", cart_item_path(cart_item.product_id),method: :delete) %></h3>
