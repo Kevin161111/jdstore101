@@ -98,7 +98,9 @@
       </ul>
     </li>
     <% if !current_user %>
-    <li id="_register" ><%= link_to("注册", new_user_registration_path,)%></li>
+    <li id="_register" >
+    <%= link_to("注册", new_user_registration_path,)%>
+  </li>
     <li id="_login" ><%= link_to("登录", new_user_session_path)%></li>
     <% else %>
     <li class="dropdown">
