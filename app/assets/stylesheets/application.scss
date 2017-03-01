@@ -35,6 +35,7 @@ a{
 
 }
 .site-nav{
+  margin-top: -22px;
   z-index: 99;
   position: relative;
   width: auto;
@@ -98,9 +99,7 @@ ul, ol{
   transition: border 0.2s;
 }
 
-.alert {
-  margin-top:40px;
-}
+
 
 
 .footer{
