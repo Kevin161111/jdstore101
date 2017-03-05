@@ -411,3 +411,25 @@ body {
   border-left: 1px solid #a6a6a6;
   font-size: 12px;
 }
+
+.productcomment ul{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #008842;
+}
+
+.productcomment li{
+  float: left;
+}
+.productcomment li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.productcomment li a:hover{
+background-color: #111111;
+}
