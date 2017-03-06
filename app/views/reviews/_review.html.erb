@@ -2,9 +2,9 @@
     <div class="pull-left">
         <p class="lead"><%= review.body %></p>
         <p>
-            <small>Submitted
+            <small>
                 <strong><%= time_ago_in_words(review.created_at) %>
-                    ago</strong>
+                    ago</strong> Submitted
                 by
                 <%= review.user.email %></small>
         </p>
@@ -12,7 +12,7 @@
 
     <div>
     <% if review.user == current_user %>
-       <%= link_to("Delete", product_review_path(@product, review), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-sm pull-right") %>
+       <%= link_to("删除评论", product_review_path(@product, review), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-sm pull-right") %>
     <% end %>
   </div>
 </div>

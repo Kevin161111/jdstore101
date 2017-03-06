@@ -36,18 +36,25 @@
     </div>
   </div>
 </div>
+
 <div class="productcomment">
-  <ul>
-    <li><a href="/">商品介绍</a></li>
-    <li><a href="/">商品评论</a></li>
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#intro">商品介绍</a></li>
+    <li><a href="#prodcomment">商品评论</a></li>
   </ul>
 
 </div>
 
-<div class="row review">
+<div class="productintro" id="intro">
+  <h3>productintro</h3>
+  <p>this place for product intro</p>
+
+</div>
+
+<div class="row review" id="prodcomment">
   <div class="col-sm-10 col-sm-offset-1">
     <h3 class="reviews_title">
-      <%= @product.reviews.count %> Reviews
+      <%= @product.reviews.count %> 评论
     </h3>
     <hr>
     <div id="reivews">

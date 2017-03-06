@@ -413,23 +413,28 @@ body {
 }
 
 .productcomment ul{
-  margin: 0;
+  margin: 20px auto;
   padding: 0;
   overflow: hidden;
-  background-color: #008842;
+  // background-color: #008842;
 }
+
+
 
 .productcomment li{
   float: left;
+
 }
 .productcomment li a{
   display: block;
-  color: white;
+  // color: white;
+  color:#008842;
   text-align: center;
   padding: 10px;
   text-decoration: none;
 }
 
 .productcomment li a:hover{
-background-color: #111111;
+background-color: #008842;
+color: white;
 }
