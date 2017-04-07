@@ -94,8 +94,8 @@
     <p><%= product.description %> </p>
     <div class="price">¥<%= product.price %></div>
 
-    <div clas="addgood">
-    <%= link_to("加入购物车", add_to_cart_product_path(product),:method => :post, :class => "add-to-cart")%>
+    <div id="addgood">
+    <%= link_to("加入购物车", add_to_cart_product_path(product),:method => :post, remote: true, :class => "add-to-cart")%>
     <div>
       <% end %>
 

@@ -163,8 +163,8 @@
 
           <div class="shopping-cart">
             <%= link_to carts_path class: "shopping-btn"  do %>
-            <span class="cartname" style="color:#008842">购物车</span>
-             <i class=" fa fa-shopping-cart" style="color:#008842"></i>( <%= current_cart.products.count %>)
+            <span  class="cartname" style="color:#008842">购物车</span>
+             <i class=" fa fa-shopping-cart" style="color:#008842"></i>( <span id="add-to-cart-1"><%= current_cart.products.count %></span>)
             <% end %>
 
 
