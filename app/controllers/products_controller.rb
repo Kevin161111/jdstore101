@@ -20,6 +20,12 @@ class ProductsController < ApplicationController
     redirect_to :back
   end
 
-
+  def search
+    if params[:search].present?
+   @products = Product.search(params[:search], fields:["title"])
+  else
+   @products = Product.all
+  end
+  end
 
 end

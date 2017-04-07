@@ -136,8 +136,12 @@
      <!-- 搜索开始 -->
      <div class="search" style="position:relative;">
                      <div class="search-bar clearfix">
-                         <input type="text" id="keyword" name="keyword" class="search-input" value="输入商品名／编号／拼音" onfocus=" if (this.value == '输入商品名／编号／拼音') {this.value = '';this.style.color = '#000';} " onblur=" if (this.value == '') {this.value = '输入商品名／编号／拼音';this.style.color = '#999';} " style="color: rgb(153, 153, 153);">
+                          <%= form_tag search_products_path, method: :get, role: "search" do%>
+                         <input type="text" id="keyword" name="keyword" params[:search] class="search-input" value="输入商品名／编号／拼音" onfocus=" if (this.value == '输入商品名／编号／拼音') {this.value = '';this.style.color = '#000';} " onblur=" if (this.value == '') {this.value = '输入商品名／编号／拼音';this.style.color = '#999';} " style="color: rgb(153, 153, 153);">
                          <input class="search-btn" type="submit" value="搜索">
+                         <% end %>
+
+                        
                      </div>
                      <!-- <ul class="hide" id="shelper" style="display: none;"></ul>
                      <div class="search-keywords" id="keywords">
