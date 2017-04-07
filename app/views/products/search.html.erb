@@ -1,21 +1,36 @@
 <div class="row">
-  <% @products.each do |product| %>
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
-        <% if @photos.present? %>
-           <% @photos.each_with_index do |p, index| %>
-             <% if index == 0 %>
-               <%= image_tag p.avatar.medium.url %>
-               <div style="letter-spacing: -8px">
-             <% else %>
-               <%= image_tag p.avatar.thumb.url %>
-             <% end %>
-           <% end %>
-           </div>
-         <% else %>
-             <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
-         <% end %>
-      </div>
-    </div>
+  <ul class="clearfix">
+
+
+  <% @products.each do |product|%>
+  <li class="pro_list">
+<figure class="snip1246">
+ <div class="img-list">
+  <%= link_to product_path(product) do %>
+    <% if product.photos.present? %>
+    <%= image_tag(product.photos[0].avatar.thumb.url, class: "thumbnail") %>
+    <% else %>
+    <%= image_tag("http://placehold.it/200x200&text=No Pic")   %>
+    <% end %>
+    <% end %>
+  </div>
+  <figcaption>
+    <%= link_to product_path(product) do %>
+    <h2><%= product.title %></h2>
+    <p><%= product.description %> </p>
+    <div class="price">¥<%= product.price %></div>
+
+    <div clas="addgood">
+    <%= link_to("加入购物车", add_to_cart_product_path(product),:method => :post, :class => "add-to-cart")%>
+    <div>
+      <% end %>
+
+  </figcaption>
+
+</figure>
+</li>
   <% end %>
+  </ul>
+</div>
+</div>
 </div>
