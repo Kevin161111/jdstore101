@@ -86,6 +86,7 @@
   </li>
   </ul>
   <ul class="fr">
+    <% if current_user %>
     <li class="myzhenguo" style="color:#008842">
       <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color:#008842"><span class="glyphicon glyphicon-user" style="color:#008842"></span>我的臻果：
       <span class="caret"></span></a>
@@ -97,6 +98,7 @@
         <li><a href="#">我的退换货</a></li>
       </ul>
     </li>
+    <% end %>
     <% if !current_user %>
     <li id="_register" >
     <%= link_to("注册", new_user_registration_path,)%>
@@ -141,7 +143,7 @@
                          <input class="search-btn" type="submit" value="搜索">
                          <% end %>
 
-                        
+
                      </div>
                      <!-- <ul class="hide" id="shelper" style="display: none;"></ul>
                      <div class="search-keywords" id="keywords">
